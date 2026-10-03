@@ -88,3 +88,77 @@ input, select {
     font-style: italic;
     color: #c22626;
 }
+/* Table Base Styling */
+.expenses-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+/* Cell Borders & Padding */
+.expenses-table th,
+.expenses-table td {
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+/* Colored Header Row */
+.expenses-table thead tr {
+  background-color: #1a252f;
+  color: #ffffff;
+}
+
+/* Alternating Row Colors */
+.expenses-table tbody tr:nth-child(even) {
+  background-color: #f4f6f8;
+}
+
+/* Table Row Hover Effect */
+.expenses-table tbody tr:hover {
+  background-color: #e2e8f0;
+  transition: background-color 0.2s ease;
+}
+
+/* Button Cursor on Hover */
+button {
+  cursor: pointer;
+}
+/* 1. Descendant Selector */
+/* Targets any button nested inside #add-expense-section */
+#add-expense-section button {
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+}
+
+/* 2. Direct Child Selector */
+/* Targets form elements directly inside .expense-form */
+.expense-form > div {
+  margin-bottom: 12px;
+}
+
+/* 3. Position-Based Pseudo-Class */
+/* Highlights the first row of the table body */
+.expenses-table tbody tr:first-child {
+  font-weight: bold;
+}
+
+/* 4. Negation Pseudo-Class */
+/* Styles all input fields except the submit button */
+input:not([type="submit"]) {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* 5. Focus State */
+/* Highlights inputs and buttons when selected/clicked */
+input:focus,
+button:focus {
+  outline: 2px solid #2563eb;
+  border-color: #2563eb;
+}
